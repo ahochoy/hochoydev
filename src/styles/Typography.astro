@@ -1,0 +1,82 @@
+<style is:global>
+    :root {
+        /* Font families. */
+        --font-family-sans: "Roboto", sans-serif;
+        --font-family-serif: "Playfair Display", serif;
+
+        /* https://www.fluid-type-scale.com/ */
+        --font-size-sm: clamp(0.75rem, -0.03vw + 0.76rem, 0.73rem);
+        --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+        --font-size-md: clamp(1.33rem, 1.07vw + 1.07rem, 1.92rem);
+        --font-size-lg: clamp(1.78rem, 2.42vw + 1.17rem, 3.11rem);
+        --font-size-xl: clamp(2.37rem, 4.84vw + 1.16rem, 5.03rem);
+        --font-size-xxl: clamp(3.16rem, 9.06vw + 0.89rem, 8.14rem);
+        --font-size-xxxl: clamp(4.21rem, 16.29vw + 0.14rem, 13.17rem);
+        
+        /* Line heights. */
+        --line-height-sm: 1.25;
+        --line-height-md: 1.5;
+        
+        /* Letter spacings. */
+        --letter-spacing-sm: 0.05em;
+        --letter-spacing-md: 0.1em;
+    }
+    /** Fonts **/
+    body {
+        font-family: var(--font-family-sans);
+    }
+    
+    /** Sizing **/
+    /* Display - XXXL */
+    html {
+        font-size: 16px;
+    }
+
+    h1, .display {
+        font-size: var(--font-size-xxxl);
+    }
+
+    /* Title - XXL */
+    h2, .title {
+        font-size: var(--font-size-xxl);
+    }
+    
+    /* Heading - XL */
+    h3, .heading {
+        font-size: var(--font-size-xl);
+    }
+
+    /* Subheading - L */
+    h4, .subheading {
+        font-size: var(--font-size-lg);
+    }
+
+    h5 {
+        font-size: var(--font-size-md)
+    }
+
+    /* Body Text - Base */
+    body, p, .body-text {
+        font-size: var(--font-size-base);
+    }
+
+    /* Small - S */
+    small, figcaption, .small-text {
+        font-size: var(--font-size-sm);
+    }
+
+    /** Modifiers **/
+    /* ALL CAPS */
+    .all-caps { text-transform: uppercase; }
+    
+    /* Emphasis */
+    .emphasis { font-style: italic; }
+    .serif { font-family: var(--font-family-serif); }
+
+    /* Weight */
+    .thin { font-weight: 100; }
+    .medium { font-weight: 500; }
+    .bold { font-weight: 700; }
+    .black { font-weight: 900; }
+
+</style>
