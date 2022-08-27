@@ -10,7 +10,12 @@
     "astro": "astro"
   },
   "devDependencies": {
+    "@astrojs/tailwind": "^1.0.0",
     "@playwright/test": "^1.25.1",
     "astro": "^1.0.8"
+  },
+  "dependencies": {
+    "@fontsource/ibm-plex-sans": "^4.5.12",
+    "@fontsource/ibm-plex-serif": "^4.5.11"
   }
 }
