@@ -1,17 +1,16 @@
 <style is:global>
     :root {
         /* Font families. */
-        --font-family-sans: "Roboto", sans-serif;
-        --font-family-serif: "Playfair Display", serif;
+        --font-family-sans: "IBM Plex Sans", sans-serif;
+        --font-family-serif: "IBM Plex Serif", serif;
 
         /* https://www.fluid-type-scale.com/ */
-        --font-size-sm: clamp(0.75rem, -0.03vw + 0.76rem, 0.73rem);
-        --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
-        --font-size-md: clamp(1.33rem, 1.07vw + 1.07rem, 1.92rem);
-        --font-size-lg: clamp(1.78rem, 2.42vw + 1.17rem, 3.11rem);
-        --font-size-xl: clamp(2.37rem, 4.84vw + 1.16rem, 5.03rem);
-        --font-size-xxl: clamp(3.16rem, 9.06vw + 0.89rem, 8.14rem);
-        --font-size-xxxl: clamp(4.21rem, 16.29vw + 0.14rem, 13.17rem);
+        --font-size-sm: clamp(0.75rem, 1.06vw + 0.49rem, 1.33rem);
+--font-size-base: clamp(1rem, 1.82vw + 0.55rem, 2rem);
+--font-size-md: clamp(1.33rem, 3.03vw + 0.58rem, 3rem);
+--font-size-lg: clamp(1.78rem, 4.95vw + 0.54rem, 4.5rem);
+--font-size-xl: clamp(2.37rem, 7.97vw + 0.38rem, 6.75rem);
+--font-size-xxl: clamp(3.16rem, 12.67vw + -0.01rem, 10.13rem);
         
         /* Line heights. */
         --line-height-sm: 1.25;
@@ -27,32 +26,28 @@
     }
     
     /** Sizing **/
-    /* Display - XXXL */
     html {
         font-size: 16px;
     }
-
+    
+    /* Display - XXXL */
     h1, .display {
-        font-size: var(--font-size-xxxl);
+        font-size: var(--font-size-xxl);
     }
 
     /* Title - XXL */
     h2, .title {
-        font-size: var(--font-size-xxl);
+        font-size: var(--font-size-xl);
     }
     
     /* Heading - XL */
     h3, .heading {
-        font-size: var(--font-size-xl);
+        font-size: var(--font-size-lg);
     }
 
     /* Subheading - L */
     h4, .subheading {
-        font-size: var(--font-size-lg);
-    }
-
-    h5 {
-        font-size: var(--font-size-md)
+        font-size: var(--font-size-md);
     }
 
     /* Body Text - Base */
@@ -74,9 +69,9 @@
     .serif { font-family: var(--font-family-serif); }
 
     /* Weight */
-    .thin { font-weight: 100; }
-    .medium { font-weight: 500; }
-    .bold { font-weight: 700; }
-    .black { font-weight: 900; }
+    .thin-weight { font-weight: 100; }
+    .medium-weight { font-weight: 500; }
+    .bold-weight { font-weight: 700; }
+    .black-weight { font-weight: 900; }
 
 </style>
