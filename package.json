@@ -11,17 +11,17 @@
   },
   "devDependencies": {
     "@astrojs/react": "^1.1.0",
-    "@astrojs/tailwind": "^1.0.0",
-    "@playwright/test": "^1.25.1",
+    "@astrojs/tailwind": "^2.1.1",
+    "@playwright/test": "^1.27.1",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
-    "astro": "^1.0.8",
+    "astro": "^1.6.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "@fontsource/ibm-plex-sans": "^4.5.12",
-    "@fontsource/ibm-plex-serif": "^4.5.11",
+    "@fontsource/ibm-plex-sans": "^4.5.13",
+    "@fontsource/ibm-plex-serif": "^4.5.12",
     "gsap": "^3.11.3"
   }
 }
