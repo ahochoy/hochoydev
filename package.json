@@ -20,7 +20,7 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "@fontsource/ibm-plex-sans": "^4.5.12",
+    "@fontsource/ibm-plex-sans": "^4.5.13",
     "@fontsource/ibm-plex-serif": "^4.5.11",
     "gsap": "^3.11.3"
   }
