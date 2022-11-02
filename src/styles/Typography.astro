@@ -1,24 +1,29 @@
 <style is:global>
     :root {
         /* Font families. */
-        --font-family-sans: "IBM Plex Sans", sans-serif;
-        --font-family-serif: "IBM Plex Serif", serif;
+        --font-family-sans: "Inter", sans-serif;
+        --font-family-serif: "Noto Sans Serif", serif;
 
         /* https://www.fluid-type-scale.com/ */
-        --font-size-sm: clamp(0.75rem, 1.06vw + 0.49rem, 1.33rem);
---font-size-base: clamp(1rem, 1.82vw + 0.55rem, 2rem);
---font-size-md: clamp(1.33rem, 3.03vw + 0.58rem, 3rem);
---font-size-lg: clamp(1.78rem, 4.95vw + 0.54rem, 4.5rem);
---font-size-xl: clamp(2.37rem, 7.97vw + 0.38rem, 6.75rem);
---font-size-xxl: clamp(3.16rem, 12.67vw + -0.01rem, 10.13rem);
+        --font-size-sm: clamp(0.8rem, 0.59vw + 0.65rem, 1.13rem);
+        --font-size-base: clamp(1rem, 0.91vw + 0.77rem, 1.5rem);
+        --font-size-md: clamp(1.25rem, 1.36vw + 0.91rem, 2rem);
+        --font-size-lg: clamp(1.56rem, 2.01vw + 1.06rem, 2.67rem);
+        --font-size-xl: clamp(1.95rem, 2.91vw + 1.23rem, 3.55rem);
+        --font-size-xxl: clamp(2.44rem, 4.17vw + 1.4rem, 4.74rem);
+        --font-size-xxxl: clamp(3.05rem, 5.93vw + 1.57rem, 6.31rem);
         
         /* Line heights. */
         --line-height-sm: 1.25;
         --line-height-md: 1.5;
+        --line-height-lg: 1.75;
+        --line-height-xl: 2;
         
         /* Letter spacings. */
-        --letter-spacing-sm: 0.05em;
-        --letter-spacing-md: 0.1em;
+        --letter-spacing-sm: 0.05rem;
+        --letter-spacing-md: 0.1rem;
+        --letter-spacing-lg: 0.1rem;
+        --letter-spacing-xl: 0.1rem;
     }
     /** Fonts **/
     body {
@@ -30,22 +35,22 @@
         font-size: 16px;
     }
     
-    /* Display - XXXL */
+    /* Display - XXL */
     h1, .display {
         font-size: var(--font-size-xxl);
     }
 
-    /* Title - XXL */
+    /* Title - XL */
     h2, .title {
         font-size: var(--font-size-xl);
     }
     
-    /* Heading - XL */
+    /* Heading - L */
     h3, .heading {
         font-size: var(--font-size-lg);
     }
 
-    /* Subheading - L */
+    /* Subheading - M */
     h4, .subheading {
         font-size: var(--font-size-md);
     }
@@ -69,9 +74,29 @@
     .serif { font-family: var(--font-family-serif); }
 
     /* Weight */
-    .thin-weight { font-weight: 100; }
-    .medium-weight { font-weight: 500; }
-    .bold-weight { font-weight: 700; }
-    .black-weight { font-weight: 900; }
+    .thin-weight { 
+        font-weight: 100;
+        font-variation-settings: "wght" 100; 
+    }
+    .light-weight {
+        font-weight: 300;
+        font-variation-settings: "wght" 300;
+    }
+    .base-weight {
+        font-weight: 400;
+        font-variation-settings: "wght" 400;
+    }
+    .medium-weight {
+        font-weight: 500;
+        font-variation-settings: "wght" 500;
+    }
+    .bold-weight {
+        font-weight: 700;
+        font-variation-settings: "wght" 700;
+    }
+    .black-weight {
+        font-weight: 900;
+        font-variation-settings: "wght" 900;
+    }
 
 </style>
