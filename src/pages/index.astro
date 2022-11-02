@@ -4,24 +4,16 @@ import Hero from '../components/Hero.astro';
 import ProfileHero from '../components/ProfileHero.astro';
 import Card from '../components/Card.astro';
 import WorkHighlight from '../components/WorkHighlight.astro';
+import Thoughts from '../components/Thoughts.astro';
+import EmailList from '../components/EmailList.astro';
 ---
 
 <Layout title="Home">
 	<Hero />
 	<ProfileHero />
 	<WorkHighlight />
-	<main>
-		<Card
-			href="#"
-			title="Thoughts"
-			body="TODO: Highlighted content (videos, blogs)"
-		/>
-		<Card
-			href="#"
-			title="Email"
-			body="TODO: Email capture for my substack"
-		/>
-	</main>
+	<Thoughts />
+	<EmailList />
 </Layout>
 
 <style>
