@@ -8,17 +8,23 @@ export function Carousel({makeSmall = false}) {
 
     const containerRef = useRef<HTMLDivElement>(null);
 
-    const numberOfItems = 5;
+    const numberOfItems = 4;
     const [currentIndex, setCurrentIndex] = useState(0);
 
     function goToNext() {
-        if (currentIndex + 1 === numberOfItems) return;
-        setCurrentIndex(currentIndex + 1);
+        if (currentIndex + 1 === numberOfItems) {
+            setCurrentIndex(0);
+        } else {
+            setCurrentIndex(currentIndex + 1);
+        }
     }
 
     function goToPrevious() {
-        if (currentIndex === 0) return;
-        setCurrentIndex(currentIndex - 1);
+        if (currentIndex === 0){
+            setCurrentIndex(3);
+        } else {
+            setCurrentIndex(currentIndex - 1);
+        }
     }
 
     useEffect(() => {
@@ -42,8 +48,8 @@ export function Carousel({makeSmall = false}) {
                     <CarouselCard />
                 </div>
                 <div>
-                    <ControlButton clickHandler={goToPrevious} active={currentIndex !== 0} reverse />
-                    <ControlButton clickHandler={goToNext} active={currentIndex + 1 !== numberOfItems} />
+                    <ControlButton clickHandler={goToPrevious} reverse />
+                    <ControlButton clickHandler={goToNext} />
                 </div>
             </div>
         </div>
