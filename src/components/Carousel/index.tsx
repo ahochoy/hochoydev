@@ -39,9 +39,9 @@ export function Carousel({makeSmall = false}) {
     const carouselSize = makeSmall ? "w-1/3" : "w-1/2"
     
     return <>
-        <div className="bg-lime-100">
-            <div className={`flex items-center relative bg-pink-300 container mx-auto ${carouselSize}`}>
-                <div className="flex w-full gap-8 relative transition-transform duration-300 ease-in-out" ref={containerRef}>
+        <div >
+            <div className={`flex items-center relative container mx-auto ${carouselSize}`}>
+                <div className="flex w-full gap-10 relative transition-transform duration-300 ease-in-out" ref={containerRef}>
                     <CarouselCard />
                     <CarouselCard />
                     <CarouselCard />

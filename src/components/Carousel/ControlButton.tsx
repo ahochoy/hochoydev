@@ -13,7 +13,7 @@ export function ControlButton({clickHandler, reverse = false}: ControlButtonProp
 
     return <button 
         onClick={() => clickHandler()}
-        className={`bg-gray-300 drop-shadow-md text-gray-800 font-bold scale-50 lg:scale-100 p-4 rounded-full absolute -translate-y-1/2 ${buttonPosition}`}>
+        className={`bg-zinc-300 drop-shadow-lg text-zinc-800 font-bold scale-50 lg:scale-100 p-4 rounded-full absolute -translate-y-1/2 ${buttonPosition}`}>
             <img src={reverse ? arrowLeft : arrowRight} width="40" alt={reverse ? "Previous" : "Next"} />
         </button>
 }
