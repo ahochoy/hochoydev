@@ -1,11 +1,29 @@
 ---
 import { Carousel } from '../components/Carousel/index.jsx'
+import SectionHeader from './HomepageSection/Header.astro';
+import HomepageSection from './HomepageSection/index.astro';
 
+const cards = [{
+    type: 'Experiment',
+    title: 'Gradient Textures in Blender',
+    blurb: 'Mapping Colors to Shadows with texture',
+    url: '/experiments/'
+},{
+    type: 'Thoughts',
+    title: 'Video for Small Businesses',
+    blurb: 'Business Need to Have Video, Why?',
+    url: '/experiments/'
+},{
+    type: 'Experiment',
+    title: 'Can You Grow a Brand with Tiktok?',
+    blurb: 'Testing out a social media theory',
+    url: '/experiments/'
+}]
 ---
-<section>
-    <div class="container p-8 mx-auto flex flex-col md:gap-x-8 md:flex-row justify-center">
-        <p class="subheading font-bold md:basis-64 md:text-right leading-tight tracking-tighter">THOUGHTS &amp; EXPERIMENTS</p>
-        <p class="basis-1/2">And so long as we're not doing everything in our personal and collective power to solve them, we know the conscience of our nation cannot rest.</p>
-    </div>
-    <Carousel makeSmall client:visible />
-</section>
+<HomepageSection name="Thoughts">
+    <SectionHeader 
+        sectionTitle="THOUGHTS &amp; EXPERIMENTS" 
+        sectionDescription="And so long as we're not doing everything in our personal and collective power to solve them, we know the conscience of our nation cannot rest."
+    />
+    <Carousel cards={cards} makeSmall client:visible />
+</HomepageSection>

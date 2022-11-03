@@ -3,12 +3,12 @@ import { useLayoutEffect, useEffect, useRef, useState } from "react";
 import { gsap } from 'gsap';
 import { ControlButton } from "./ControlButton";
 import { CarouselCard } from "./CarouselCard";
+import type { CarouselProps } from "./carousel.interface";
 
-export function Carousel({makeSmall = false}) {
+export function Carousel({makeSmall = false, cards}:CarouselProps) {
 
     const containerRef = useRef<HTMLDivElement>(null);
-
-    const numberOfItems = 4;
+    const numberOfItems = cards.length;
     const [currentIndex, setCurrentIndex] = useState(0);
 
     function goToNext() {
@@ -42,10 +42,9 @@ export function Carousel({makeSmall = false}) {
         <div >
             <div className={`flex items-center relative container mx-auto ${carouselSize}`}>
                 <div className="flex w-full gap-10 relative transition-transform duration-300 ease-in-out" ref={containerRef}>
-                    <CarouselCard />
-                    <CarouselCard />
-                    <CarouselCard />
-                    <CarouselCard />
+                    {cards.map((card) => {
+                        return <CarouselCard {...card} />
+                    })}
                 </div>
                 <div>
                     <ControlButton clickHandler={goToPrevious} reverse />
