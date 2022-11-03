@@ -1,12 +1,13 @@
 ---
 import { Carousel } from '../components/Carousel/index.jsx'
-import SectionHeader from './SectionHeader.astro';
+import SectionHeader from './HomepageSection/Header.astro';
+import HomepageSection from './HomepageSection/index.astro';
 
 ---
-<section>
+<HomepageSection name="Thoughts">
     <SectionHeader 
         sectionTitle="THOUGHTS &amp; EXPERIMENTS" 
         sectionDescription="And so long as we're not doing everything in our personal and collective power to solve them, we know the conscience of our nation cannot rest."
     />
     <Carousel makeSmall client:visible />
-</section>
+</HomepageSection>
