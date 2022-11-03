@@ -36,10 +36,10 @@ export function Carousel({makeSmall = false}) {
         }
     }, [currentIndex])
 
-    const carouselSize = makeSmall ? "w-1/3" : "w-1/2"
+    const carouselSize = makeSmall ? "w-[30vw]" : "w-[50vw]"
     
     return <>
-        <div >
+        <div className="overflow-hidden lg:overflow-visible">
             <div className={`flex items-center relative container mx-auto ${carouselSize}`}>
                 <div className="flex w-full gap-10 relative transition-transform duration-300 ease-in-out" ref={containerRef}>
                     <CarouselCard />
