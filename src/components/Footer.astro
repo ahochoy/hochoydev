@@ -1,18 +1,18 @@
 ---
 import headshot from '../images/headshot.png';
 ---
-<footer class="bg-zinc-900 p-16 lg:p-24 lg:pb-14 relative">
+<footer class="bg-zinc-900 p-4 md:p-16 lg:p-24 lg:pb-14 relative">
     <div class="z-0 absolute top-0 left-0 text-zinc-800 w-full overflow-hidden h-full">
         <p class="text-[10vw] whitespace-nowrap">ANDREW HOCHOY &amp;REW HOCHOY</p>
         <p class="text-[10vw] whitespace-nowrap">ANDREW HOCHOY &amp;REW HOCHOY</p>
         <p class="text-[10vw] whitespace-nowrap">ANDREW HOCHOY &amp;REW HOCHOY</p>
     </div>
     <div class="z-10 absolute inset-0 bg-gradient-to-t from-zinc-800 to-transparent"></div>
-    <div class="z-20 relative container mx-auto flex gap-8 lg:gap-16 flex-col">
+    <div class="z-20 relative sm:container mx-auto flex gap-8 lg:gap-16 flex-col">
         <div class="flex gap-8 lg:gap-16">
-            <div class="rounded-lg basis-3/4 bg-zinc-700 grid place-items-center">
-                <div class="flex gap-8 px-8 lg:px-16">
-                    <div class="p-3">
+            <div class="rounded-lg basis-full md:basis-3/4 bg-zinc-700 grid place-items-center">
+                <div class="flex md:gap-8 p-8 lg:p-16">
+                    <div class="md:p-3 hidden md:block">
                         <svg height="40" width="40" class="fill-lime-300">
                             <circle cx="16" cy="16" r="16" />
                         </svg>
@@ -24,8 +24,8 @@ import headshot from '../images/headshot.png';
                     </div>
                 </div>
             </div>
-            <div class="rounded-lg bg-zinc-100 basis-1/4 grid place-items-center aspect-square">
-                <img src={headshot} />
+            <div class="hidden rounded-lg bg-zinc-100 basis-1/4 md:grid place-items-center aspect-square">
+                <img src={headshot} width="421" height="421" />
             </div>
         </div>
         <div class="flex text-zinc-200">
