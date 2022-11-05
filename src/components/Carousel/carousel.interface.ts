@@ -5,6 +5,7 @@ export interface CarouselCardProps {
     title: string;
     blurb: string;
     url: string;
+    isActiveCard: boolean
 }
 
 

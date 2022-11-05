@@ -27,23 +27,32 @@ export function Carousel({makeSmall = false, cards}:CarouselProps) {
         }
     }
 
-    useEffect(() => {
-        if (containerRef.current) {
-            const gap = parseInt(getComputedStyle(containerRef.current).gap);
-            const itemWidth = containerRef.current.querySelectorAll('div').item(0).getBoundingClientRect().width
+    useEffect(() => {        
+        const displayActiveCarouselCard = () => {
+            if (containerRef.current) {
+                const gap = parseInt(getComputedStyle(containerRef.current).gap);
+                const itemWidth = containerRef.current.querySelectorAll('div').item(0).getBoundingClientRect().width
+    
+                gsap.set(containerRef.current, {translateX: -currentIndex * (itemWidth + gap)})
+            }
+        };
 
-            gsap.set(containerRef.current, {translateX: -currentIndex * (itemWidth + gap)})
+        displayActiveCarouselCard()
+        window.addEventListener('resize', displayActiveCarouselCard);
+
+        return () => {
+            window.removeEventListener('resize', displayActiveCarouselCard);
         }
     }, [currentIndex])
 
-    const carouselSize = makeSmall ? "w-[30vw]" : "w-[50vw]"
+    const carouselSize = makeSmall ? "2xl:w-[30vw]" : "2xl:w-[50vw]"
     
     return <>
-        <div className="overflow-hidden lg:overflow-visible">
-            <div className={`flex items-center relative container mx-auto ${carouselSize}`}>
+        <div className="w-full overflow-hidden">
+            <div className={`flex w-[90vw] items-center relative container mx-auto ${carouselSize}`}>
                 <div className="flex w-full gap-10 relative transition-transform duration-300 ease-in-out" ref={containerRef}>
-                    {cards.map((card) => {
-                        return <CarouselCard {...card} />
+                    {cards.map((card,i) => {
+                        return <CarouselCard key={i} {...card} isActiveCard={i === currentIndex} />
                     })}
                 </div>
                 <div>
