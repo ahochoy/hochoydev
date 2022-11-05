@@ -49,7 +49,7 @@ export function Carousel({makeSmall = false, cards}:CarouselProps) {
     
     return <>
         <div className="w-full overflow-hidden">
-            <div className={`flex w-[90vw] items-center relative container mx-auto ${carouselSize}`}>
+            <div className={`flex w-[75vw] items-center relative container mx-auto ${carouselSize}`}>
                 <div className="flex w-full gap-10 relative transition-transform duration-300 ease-in-out" ref={containerRef}>
                     {cards.map((card,i) => {
                         return <CarouselCard key={i} {...card} isActiveCard={i === currentIndex} />
