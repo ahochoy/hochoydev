@@ -1,5 +1,42 @@
 ---
+import headshot from '../images/headshot.png';
 ---
-<footer class="bg-neutral-800 p-4 min-h-fit">
-    <p class="text-neutral-50">Footer Links</p>
+<footer class="bg-zinc-900 p-16 lg:p-24 lg:pb-14 relative">
+    <div class="z-0 absolute top-0 left-0 text-zinc-800 w-full overflow-hidden h-full">
+        <p class="text-[10vw] whitespace-nowrap">ANDREW HOCHOY &amp;REW HOCHOY</p>
+        <p class="text-[10vw] whitespace-nowrap">ANDREW HOCHOY &amp;REW HOCHOY</p>
+        <p class="text-[10vw] whitespace-nowrap">ANDREW HOCHOY &amp;REW HOCHOY</p>
+    </div>
+    <div class="z-10 absolute inset-0 bg-gradient-to-t from-zinc-800 to-transparent"></div>
+    <div class="z-20 relative container mx-auto flex gap-8 lg:gap-16 flex-col">
+        <div class="flex gap-8 lg:gap-16">
+            <div class="rounded-lg basis-3/4 bg-zinc-700 grid place-items-center">
+                <div class="flex gap-8 px-8 lg:px-16">
+                    <div class="p-3">
+                        <svg height="40" width="40" class="fill-lime-300">
+                            <circle cx="16" cy="16" r="16" />
+                        </svg>
+                    </div>
+                    <div class="text-zinc-200 light-weight">
+                        <p class="pb-8 subheading">I'm currently accepting freelance projects. Please reach out, I'd love to work with you.</p>
+                        <p>phone - 555.123.4567</p>
+                        <p>email - hello@andrewhochoy.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="rounded-lg bg-zinc-100 basis-1/4 grid place-items-center aspect-square">
+                <img src={headshot} />
+            </div>
+        </div>
+        <div class="flex text-zinc-200">
+            <div class="basis-1/2">
+                <p>For more please visit--</p>
+                <p class="serif emphasis">@hochoy on twitter, instagram, behance, medium, and superpeer</p>
+            </div>
+            <div class="basis-1/2 text-right">
+                <p>Thank you for scrolling.</p>
+                <p class="small-text">&copy; 2022</p>
+            </div>
+        </div>
+    </div>
 </footer>
