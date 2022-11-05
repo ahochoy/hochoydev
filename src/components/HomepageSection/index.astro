@@ -6,7 +6,7 @@ interface Props {
 const { name } = Astro.props;
 ---
 <section class="min-h-screen w-screen grid place-items-center" data-name={name} >
-    <div>
+    <div class="w-full h-full">
         <slot />
     </div>
 </section>
