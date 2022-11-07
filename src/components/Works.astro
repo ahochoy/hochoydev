@@ -1,25 +1,6 @@
 ---
-import { Carousel } from '../components/Carousel/index.jsx'
 import SectionHeader from './HomepageSection/Header.astro';
 import HomepageSection from './HomepageSection/index.astro';
-
-const data = [{
-    type: 'Case Study',
-    title: 'Webflow for Modern Beauty Brand',
-    blurb: 'Cloneable tailor-made for a modern-day beauty brand',
-    url: '/works/'
-},{
-    type: 'Past Work',
-    title: 'Product Strategy for Enterprise Video',
-    blurb: 'Cloneable tailor-made for a modern-day beauty brand',
-    url: '/works/'
-},{
-    type: 'Past Work',
-    title: 'Understanding the World of Retail',
-    blurb: 'Pandemic has had an indelible effect on the world of retail',
-    url: '/works/'
-}]
-
 
 ---
 <HomepageSection name="Works">
@@ -27,5 +8,11 @@ const data = [{
         sectionTitle="WORK &amp; WHATNOT" 
         sectionDescription="And so long as we're not doing everything in our personal and collective power to solve them, we know the conscience of our nation cannot rest."
     />
-    <Carousel cards={data} client:visible />
+    <div class="grid grid-cols-1 md:grid-cols-3 auto-rows-[minmax(calc(50vh-3rem),_1fr)] place-items-stretch gap-8 px-8">
+        <div class="col-span-1 rounded-lg bg-zinc-300 md:col-span-2 row-span-2"></div>
+        <div class="col-span-1 rounded-lg bg-blue-300"></div>
+        <div class="col-span-1 rounded-lg bg-amber-300"></div>
+        <div class="col-span-1 rounded-lg bg-neutral-300"></div>
+        <div class="col-span-1 rounded-lg bg-cyan-300 md:col-span-2 "></div>
+    </div>
 </HomepageSection>
