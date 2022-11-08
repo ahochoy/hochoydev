@@ -38,6 +38,24 @@ export default {
       of: [{type: 'reference', to: {type: 'category'}}],
     },
     {
+      name: 'companies',
+      title: 'Companies',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'company'}}],
+    },
+    {
+      name: 'roles',
+      title: 'Roles',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'role'}}],
+    },
+    {
+      name: 'skills',
+      title: 'Skills',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'skill'}}],
+    },
+    {
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
