@@ -12,6 +12,10 @@ import author from './author'
 import company from './company'
 import role from './role'
 import skill from './skill'
+import homepageContent from './homepageContent'
+import globalContent from './globalContent'
+import link from './link'
+import experimentsPage from './experimentsPage'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -31,5 +35,9 @@ export default createSchema({
     company,
     role,
     skill,
+    homepageContent,
+    globalContent,
+    link,
+    experimentsPage,
   ]),
 })

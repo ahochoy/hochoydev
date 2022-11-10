@@ -6,8 +6,14 @@ export default {
         {
             name: 'name',
             type: 'string',
-            title: 'Name'
-        },{
+            title: 'Name',
+        },
+        {
+            name: 'logo',
+            type: 'image',
+            title: 'Logo',
+        },
+        {
             name: 'engagementType',
             type: 'string',
             title: 'Engagement Type',
@@ -16,17 +22,18 @@ export default {
                     {title: 'Employer', value: 'employer'},
                     {title: 'Employer Client', value: 'employerClient'},
                     {title: 'Client', value: 'client'}
-                ], // <-- predefined values
-                layout: 'radio' // <-- defaults to 'dropdown'
-              }
-        },{
+                ],
+            },
+        },
+        {
             name: 'description',
             type: 'text',
-            title: 'Description'
-        },{
+            title: 'Description',
+        },
+        {
             name: 'timeServed',
             type: 'string',
-            title: 'Time Served'
+            title: 'Time Served',
         }
     ]
 }
