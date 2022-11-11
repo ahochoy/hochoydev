@@ -33,7 +33,8 @@ export default {
         {
             name: 'profileBody',
             title: 'Profile Body',
-            type: 'text',
+            type: 'array', 
+            of: [{type: 'block'}],
             group: 'profile',
         },
         {
