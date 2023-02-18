@@ -17,6 +17,8 @@
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.11",
     "astro": "^1.6.2",
+    "astro-portabletext": "^0.7.0",
+    "astro-sanity": "^1.0.0",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
     "react": "^18.2.0",

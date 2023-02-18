@@ -1,0 +1,1 @@
+/// <reference path="sanity-dotcom.d.ts" />
