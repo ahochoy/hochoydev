@@ -38,6 +38,33 @@ export default {
             group: 'profile',
         },
         {
+            name: 'profileInterestBlurb',
+            title: 'Profile Interest Blurb',
+            type: 'text',
+            group: 'profile',
+        },
+        {
+            name: 'profileInterests',
+            title: 'Profile Interests',
+            type: 'array', 
+            of: [{
+                type: "object",
+                fields: [
+                    {
+                    title: "Interest",
+                    name: "interest",
+                    type: "string"
+                    },
+                    {
+                    title: "Highlight Image",
+                    name: "highlightImage",
+                    type: "image"
+                    },
+                ],
+            }],
+            group: 'profile',
+        },
+        {
             name: 'primaryHeader',
             title: 'Primary Section Header',
             type: 'string',
