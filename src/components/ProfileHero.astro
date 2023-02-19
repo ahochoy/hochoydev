@@ -1,9 +1,11 @@
 ---
 import HomepageSection from './HomepageSection/index.astro';
+import ProfileInterestList from './ProfileInterestList.astro';
 import { getProfileHero } from '../api/sanity';
 import { PortableText } from "astro-portabletext";
 
-const { profileIntro, profileBody }= await getProfileHero()
+const { profileIntro, profileBody, profileInterestBlurb, profileInterests }= await getProfileHero()
+
 ---
 <HomepageSection  name="Profile Hero">
     <div class="container mx-auto relative flex lg:items-center">
@@ -11,8 +13,14 @@ const { profileIntro, profileBody }= await getProfileHero()
         <div class="relative z-10 container mx-auto px-8 lg:pl-[25vw] flex flex-col">
             <h1 class="uppercase w-fit text-right ml-auto black-weight leading-none tracking-tight lg:text-[8vw]">Andrew <br /> HoChoy</h1>
             <h2 class="leading-tight my-8 lg:my-16">{ profileIntro }</h2>
-            <div class="lg:columns-2 subheading">
-                <PortableText value={ profileBody } />
+            <div class="flex flex-col subheading gap-6 md:flex-row">
+                <div>
+                    <PortableText value={ profileBody } />
+                </div>
+                <div class="md:order-first ">
+                    <p class="mb-4">{ profileInterestBlurb }</p>
+                    <ProfileInterestList interests={profileInterests} />
+                </div>
             </div>
         </div>
     </div>

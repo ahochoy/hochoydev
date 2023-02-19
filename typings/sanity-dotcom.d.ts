@@ -4,6 +4,13 @@ export namespace Sanity {
     interface ProfileHero {
         profileIntro: string;
         profileBody: Block | Block[];
+        profileInterestBlurb: string;
+        profileInterests: ProfileInterest[];
+    }
+
+    interface ProfileInterest {
+        interest: string;
+        highlightImage: string;
     }
 
     interface PrimarySection {
