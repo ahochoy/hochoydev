@@ -1,0 +1,13 @@
+---
+import type { Sanity } from '../../typings/sanity-dotcom';
+
+interface Props {
+    interests: Sanity.ProfileInterest[];
+}
+
+const { interests } = Astro.props;
+---
+<ul class="divide-y divide-slate-700">
+    {interests.map((data) => <li>{data.interest}</li>)}
+</ul>
+  
