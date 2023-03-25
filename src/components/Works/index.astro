@@ -1,0 +1,39 @@
+---
+import SectionHeader from '../HomepageSection/Header.astro';
+import HomepageSection from '../HomepageSection/index.astro';
+import { SkillTile } from "./SkillTile";
+import { PastWork } from "./PastWork";
+
+---
+<HomepageSection name="Works">
+    <SectionHeader 
+        sectionTitle="WORK &amp; WHATNOT" 
+        sectionDescription="And so long as we're not doing everything in our personal and collective power to solve them, we know the conscience of our nation cannot rest."
+        sectionCTA="Let's Parlez"
+        sectionCTAurl="/"
+    />
+    <div class="grid grid-cols-1 md:grid-cols-3 auto-rows-[minmax(calc(40vh-3rem),_1fr)] place-items-stretch gap-8 px-8">
+        <div class="work-tile col-span-1 md:col-span-2 row-span-2">
+            <p class="heading">Currently running my digital agency <b>Webspenser</b> with the mission of helping businesses in the food and beverage industry harness the power of the web and find success online.</p>
+        </div>
+        <div class="work-tile col-span-1">
+            <SkillTile focusArea="education" blurb="TBD" skills={["public speaking", "facilitation"]}/>
+        </div>
+        <div class="work-tile col-span-1">
+            <SkillTile focusArea="engineering" blurb="TBD" skills={["user experience", "data-driven design", "software quality"]}/>
+        </div>
+        <div class="work-tile col-span-1">
+            <SkillTile focusArea="entrepreneurship" blurb="TBD" skills={["project management", "branding", "marketing"]}/>
+        </div>
+        <div class="work-tile col-span-1 md:col-span-2 "><PastWork /></div>
+    </div>
+</HomepageSection>
+<style>
+    .work-tile {
+        border-radius: 0.5rem;
+        background-color: rgb(212 212 212);
+        display: grid;
+        place-items: center;
+        padding: 2rem;
+    }
+</style>
