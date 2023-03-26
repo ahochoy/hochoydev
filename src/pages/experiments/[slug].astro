@@ -1,0 +1,19 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+export function getStaticPaths() {
+  return [
+    {params: {slug: 'hello-world'}},
+    {params: {slug: 'my-favorite-things'}},
+    {params: {slug: 'summertime'}},
+  ];
+}
+
+const { slug } = Astro.params;
+---
+
+<Layout title="Experiments">
+    <div class="container p-8 pt-64 mx-auto min-h-screen">
+        <h1>A post about {slug}</h1>
+    </div>
+</Layout>
