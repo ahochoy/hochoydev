@@ -3,6 +3,24 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout title="Experiments">
-    <h1>Experiments.</h1>
-    <a href="/">Go Home</a>
+    <div class="container p-8 pt-64 pr-[25vw] mx-auto flex flex-col gap-2 md:gap-8">
+        <h2 class="font-bold leading-tight tracking-tighter uppercase heading">Thoughts & Experiments</h2>
+        <p class="subheading">
+            Life is filled with problems, but really it all a matter of perspective. God-first, everything else second. A designer at heart with an ear for poetry, an eye for patterns, and an appetite for puzzles.
+        </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 auto-rows-[minmax(calc(40vh-3rem),_1fr)] place-items-stretch gap-8 p-8">
+        <div class="experiment-tile col-span-1 md:col-span-2 row-span-2"></div>
+        <div class="experiment-tile col-span-1"></div>
+        <div class="experiment-tile col-span-1"></div>
+        <div class="experiment-tile col-span-1"></div>
+        <div class="experiment-tile col-span-1 md:col-span-2 "></div>
+    </div>
 </Layout>
+<style>
+    .experiment-tile {
+        border-radius: 0.5rem;
+        background-color: rgb(212 212 212);
+        padding: max(2rem, 3vw);
+    }
+</style>
