@@ -13,7 +13,7 @@ import { PastWork } from "./PastWork";
         sectionCTAurl="/"
     />
     <div class="grid grid-cols-1 md:grid-cols-3 auto-rows-[minmax(calc(40vh-3rem),_1fr)] place-items-stretch gap-8 px-8">
-        <div class="work-tile col-span-1 md:col-span-2 row-span-2">
+        <div class="work-tile col-span-1 md:col-span-2 row-span-2 grid place-items-center">
             <p class="heading">Currently running my digital agency <b>Webspenser</b> with the mission of helping businesses in the food and beverage industry harness the power of the web and find success online.</p>
         </div>
         <div class="work-tile col-span-1">
@@ -32,8 +32,6 @@ import { PastWork } from "./PastWork";
     .work-tile {
         border-radius: 0.5rem;
         background-color: rgb(212 212 212);
-        display: grid;
-        place-items: center;
-        padding: 2rem;
+        padding: max(2rem, 3vw);
     }
 </style>
