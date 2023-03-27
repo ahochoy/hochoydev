@@ -11,7 +11,7 @@ interface Props {
 const { sectionTitle, sectionDescription, sectionCTA, sectionCTAurl } = Astro.props;
 ---
 <div class="container p-8 pt-0 mx-auto flex flex-col gap-2 md:gap-8 md:flex-row justify-center">
-    <h2 class="font-bold md:basis-64 md:text-right leading-tight tracking-tighter">{sectionTitle}</h2>
+    <h2 class="black-weight md:basis-64 md:text-right leading-tight tracking-tighter">{sectionTitle}</h2>
     <div class="basis-2/3">
       <p class="heading">{sectionDescription}</p>
       <a href={sectionCTAurl} class="w-fit mt-6 sm:mt-2 px-3 py-1 border border-solid border-zinc-900 bg-zinc-100 bg-opacity-10 rounded-full items-center flex gap-2">
