@@ -8,8 +8,8 @@ interface SkillTileProps {
 
 export function SkillTile({ focusArea, blurb, skills}: SkillTileProps) {
 
-    const skillsMarkup = skills.map( (skill) => {
-        return <li className="body-text bg-neutral-100 rounded-full px-3 py-1 w-fit whitespace-nowrap">{skill}</li>
+    const skillsMarkup = skills.map( (skill, id) => {
+        return <li key={id} className="body-text bg-neutral-100 rounded-full px-3 py-1 w-fit whitespace-nowrap">{skill}</li>
     })
 
     return <div className="w-full space-y-4">
