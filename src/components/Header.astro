@@ -1,6 +1,7 @@
 ---
+import { Menu } from './Menu'
 ---
-<header class="w-full fixed top-0 z-50 pointer-events-none">
+<header class="w-full fixed top-0 z-50 pointer-events-none grid">
     <nav class="flex justify-between items-center p-8">
         <a href="/"><h1 class="black-weight leading-[.5]">&amp;rew.</h1></a>
         <a href="/" class="px-3 py-1 border border-solid border-zinc-900 bg-zinc-100 bg-opacity-10 rounded-full flex items-center gap-2">
@@ -10,8 +11,8 @@
             <p>Let's Connect</p>
         </a>
     </nav>
+    <Menu />
 </header>
-
 <style>
     a {
         pointer-events: auto;
