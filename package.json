@@ -30,6 +30,6 @@
     "@fontsource/ibm-plex-serif": "^4.5.12",
     "@fontsource/inter": "^4.5.15",
     "@fontsource/noto-serif-display": "^4.5.15",
-    "gsap": "^3.11.4"
+    "gsap": "^3.11.5"
   }
 }
